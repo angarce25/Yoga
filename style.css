@@ -1,0 +1,243 @@
+/*Estilo general header y footer*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+body {
+    background-color: white;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+   
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+}
+
+img.foto-ajustada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    /* La figura ocupa la mitad del espacio */
+    height: auto;
+    /* Mantiene la proporción original */
+
+
+}
+
+img.foto-ajustada:hover {
+    transform: scale(1.1);
+    /*Así ampliamos la imagen*/
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.logo {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    justify-content: start;
+
+}
+
+
+.abrirMenu,
+.cerrarMenu {
+    display: none;
+}
+
+
+.navLink {
+    display: flex;
+    gap: 3rem;
+    justify-content: end;
+    margin-right: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.navList {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #5b4f47;
+    font-weight: bolder;
+}
+
+
+article.principal {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+
+}
+
+h1 {
+    color: #5b4f47;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+.promo-text {
+    text-align: center;
+    font-size: 13px;
+    /* Tamaño de letra pequeña */
+    margin-bottom: 10px;
+    /* Espacio inferior para separar del botón */
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #5d5754;
+    font-size: 16px;
+    line-height: 1.5;
+    /* Puedes usar un valor numérico o porcentaje */
+}
+
+
+
+
+.btn {
+    background-color: #a3e6c1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 1rem;
+    font-size: 15px;
+    /* Corrección de la propiedad 'font' */
+    cursor: pointer;
+    text-align: center;
+    /* Alineación horizontal del texto */
+}
+
+.btn:hover {
+    background-color: #12f6cd;
+}
+
+/* Estilos generales para el footer */
+footer {
+    background-color: #D9CAB7;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .abrirMenu,
+    .cerrarMenu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: 2rem;
+    }
+
+    .abrirMenu {
+        color: black;
+    }
+
+    .cerrarMenu {
+        color: white;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #D9CAB7;
+        box-shadow: 0 0 0 100vmax rgba(246, 226, 226, 0.5);
+        padding: 2rem;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navBar.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navLink {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .navLink li a {
+        color: #0e0d0d;
+
+    }
+
+    .foto-ajustada {
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin-left: 2rem;
+    }
+    main {
+        height: 75vh;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+
+    li {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    article {
+        width: fit-content;
+    }
+    footer{
+		margin-top: 4.5rem;
+	}
+}
